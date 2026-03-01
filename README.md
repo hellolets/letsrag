@@ -97,7 +97,7 @@ The retrieval pipeline is the true engine of this RAG system. A naive RAG just d
 
 #### 1. Two-Stage Markdown-Aware Chunking (Chonkie Pipeline)
 
-Before any retrieval can happen, documents must be split into meaningful pieces. Poor chunking is the single most common reason RAG systems produce bad answers.
+Before any retrieval can happen, documents must be split into meaningful pieces. Poor chunking is the single most common reason RAG systems produce bad answers. 
 
 LetsRag uses a **two-stage pipeline** via [Chonkie](https://github.com/chonkie-ai/chonkie):
 1. **Recursive Markdown chunking** - first splits by document structure (`#`, `##`, `###` headings), ensuring that logically related content stays together.
