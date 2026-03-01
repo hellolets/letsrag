@@ -31,11 +31,11 @@
 
 ## Overview
 
-**LetsRag** is an open-source initiative by [Letsinnovate](https://letsinnovate.es) that provides a clean, well-engineered starting point for building a **Retrieval-Augmented Generation (RAG)** system that runs **100% locally** — no cloud tokens, no data sent to third-party servers, no costs.
+**LetsRag** is an open-source initiative by [Letsinnovate](https://letsinnovate.es) that provides a clean, well-engineered starting point for building a **Retrieval-Augmented Generation (RAG)** system that runs **100% locally**. No cloud tokens, no data sent to third-party servers, no costs.
 
 The project is designed both as a **learning resource** (to understand all the moving parts of a production RAG pipeline) and as a **solid base** to extend for real use cases. It ships with a fully functional FastAPI backend, a chat UI, and a built-in DeepEval evaluation suite.
 
-> **Key insight:** This project deliberately uses a smaller 8B local LLM to demonstrate an important principle — by engineering the *retrieval pipeline* correctly (chunking, hybrid search, reranking), you can dramatically improve the quality of the final answer without ever upgrading the model. Improving the LLM is always an option, but optimizing the retrieval layer is the right first step.
+> **Key insight:** This project deliberately uses a smaller 8B local LLM to demonstrate an important principle: by engineering the *retrieval pipeline* correctly (chunking, hybrid search, reranking), you can dramatically improve the quality of the final answer without ever upgrading the model. Improving the LLM is always an option, but optimizing the retrieval layer is the right first step.
 
 ---
 
@@ -167,9 +167,9 @@ The top-K candidates from RRF are passed through the reranker, which re-scores t
 Having a working RAG is only half the battle. Knowing it returns *factual*, *grounded* information is critical. LetsRag ships with a built-in evaluation pipeline powered by **[DeepEval](https://github.com/confident-ai/deepeval)**.
 
 The evaluation suite lives in `eval/`:
-- **`eval/dataset.json`** — Benchmark dataset: questions and expected answers derived from the `input/` documents.
-- **`eval/evaluate.py`** — Runs the full RAG pipeline programmatically against every question and scores the results.
-- **`eval/results.json`** — Detailed per-question report saved after each run.
+- **`eval/dataset.json`**: Benchmark dataset with questions and expected answers derived from the `input/` documents.
+- **`eval/evaluate.py`**: Runs the full RAG pipeline programmatically against every question and scores the results.
+- **`eval/results.json`**: Detailed per-question report saved after each run.
 
 ### Metrics
 
@@ -224,11 +224,11 @@ pip install -r requirements.txt
 
 ## Running the Project
 
-**Step 1 — Add your documents**
+**Step 1: Add your documents**
 
 Place any `.md` files you want the system to read into the `input/` directory.
 
-**Step 2 — Ingest the documents**
+**Step 2: Ingest the documents**
 
 ```bash
 PYTHONPATH=. python rag_studio/ingestion.py
@@ -236,13 +236,13 @@ PYTHONPATH=. python rag_studio/ingestion.py
 
 This will chunk the documents, generate embeddings, and populate ChromaDB.
 
-**Step 3 — Start the server**
+**Step 3: Start the server**
 
 ```bash
 PYTHONPATH=. python run.py
 ```
 
-**Step 4 — Chat**
+**Step 4: Chat**
 
 Open your browser at `http://localhost:8000` and start asking questions about your documents.
 
