@@ -42,10 +42,11 @@ The project is designed both as a **learning resource** (to understand all the m
 ## Demo
 
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/YOUR_VIDEO_ID_HERE" width="75%" controls autoplay loop muted>
+  <video src="https://github.com/user-attachments/assets/13eeb1cb-89be-4c7f-b288-88cf6baef08a" width="75%" controls autoplay loop muted>
     Your browser does not support the video tag.
   </video>
 </div>
+
 
 ---
 
